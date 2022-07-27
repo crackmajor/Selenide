@@ -11,7 +11,7 @@ public class appOrderTest {
     @BeforeEach
     public void conf() {
         Configuration.headless=true;
-        Configuration.browser = "firefox";
+//        Configuration.browser = "firefox";
         open("http://localhost:9999/");
     }
 
