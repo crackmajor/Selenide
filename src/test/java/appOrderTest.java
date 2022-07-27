@@ -1,7 +1,10 @@
+import com.codeborne.selenide.Browser;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Configuration.browser;
+import static com.codeborne.selenide.Configuration.headless;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -10,8 +13,7 @@ public class appOrderTest {
 
     @BeforeEach
     public void conf() {
-        Configuration.headless=true;
-//        Configuration.browser = "firefox";
+        Configuration.browser = "firefox";
         open("http://localhost:9999/");
     }
 
